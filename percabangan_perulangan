@@ -1,0 +1,46 @@
+# Program Remedial Ujian Mahasiswa
+
+# Input nama mahasiswa
+nama = input ("Masukkan nama mahasiswa: ")
+
+# Menentukan target nilai
+if nama.lower() == "andi":
+    target = 70
+elif nama.lower() == "budi":
+    target = 75
+elif nama.lower() == "citra":
+    target = 80
+else:
+    print("Nama mahasiswa tidak terdaftar!")
+    exit()
+
+print("Nama mahasiswa :", nama)
+print("Target nilai   :", target)
+
+# Instalasi percobaan 
+percobaan = 0
+lulus = False
+
+# Perulangan maksimal 3 kali 
+while percobaan < 3:
+    nilai = int(input("Masukkan nilai ujian: "))
+    percobaan += 1
+
+    print("Percobaan ke-", percobaan)
+
+    # Pengecekan nilai
+    if nilai >= target:
+        lulus = true 
+        break
+    else:
+        print("Nilai belum mencapai target.")
+        if percobaan < 3:
+            print("Silahkan mengikuti remedial.")
+
+# Menampilkan hasil akhir
+if lulus:
+    print(nama, "berhasil lulus setelah",
+          percobaan, "kali percobaan!")
+else:
+    print(nama, "tidak lulus setelah",
+          percobaan, "kali percobaan.")
